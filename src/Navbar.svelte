@@ -3,7 +3,7 @@
 </script>
 <nav class="nav">
     <div class="nav-center">
-      <h1 class="nav-title">Budget Calculator</h1>
+      <h1 class="nav-title">Local Expense Record</h1>
     </div>
     <button type="button" class="nav-btn" on:click={handleShowForm}>
       <i class="far fa-plus-square" />

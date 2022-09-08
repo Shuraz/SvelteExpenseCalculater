@@ -7,7 +7,7 @@
     // export let removeExpense;
     const removeItem=getContext("remove");
     const setModifiedExpense=getContext("modify")
-    export let handleShowForm;
+
 
 </script>
 
@@ -23,7 +23,7 @@
         {/if}
         </div>
         <div class="expense-buttons">
-            <button class="expense-btn edit-btn" on:click={()=>{setModifiedExpense(id)}} {handleShowForm}>
+            <button class="expense-btn edit-btn" on:click={()=>{setModifiedExpense(id)}}>
                 <i class="fas fa-pen"></i>
             </button>
             <!-- <button class="expense-btn delete-btn" on:click={()=>{removeExpense(id)}}> -->
