@@ -7,6 +7,7 @@
   import { setContext } from "svelte";
   import Totals from "./Totals.svelte";
   import ExpenseForm from "./ExpenseForm.svelte";
+  import Modal from "./Modal.svelte";
   import { onMount,afterUpdate } from "svelte";
 
   //data
@@ -113,6 +114,7 @@
 <Navbar {handleShowForm} />
 <main class="content">
   {#if isFormShow}
+  <Modal>
     <ExpenseForm
       {addExpense}
       bind:name={setName}
@@ -121,9 +123,13 @@
       {editExpense}
       {handleFormClose}
     />
+    
+  </Modal>
   {/if}
+
   <Totals title="total expenses" {total} />
   <ExpensesList {expenses} {removeExpense} {handleShowForm} />
   <button class="btn" on:click={clearExpenses}>Clear Expenses</button>
 </main>
+
 <!-- <Title {title}/> -->

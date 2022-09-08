@@ -8,7 +8,7 @@
 <section>
     <SectionTitle title="expense list"/>
     <ul>
-        {#each expenses as expense, index}
+        {#each expenses as expense, index (expense.id)}
         <!-- <Expense {...expense}{removeExpense}/> -->
         <Expense {...expense} {handleShowForm}/>
         {:else}
